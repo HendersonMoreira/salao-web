@@ -7,11 +7,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form #fc="ngForm">
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input label="Nome produtor" label-placement="floating" fill="outline" placeholder="Digite o nome do produtor"
+          [(ngModel)]="produto.nome" required></ion-input>
+      </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <ion-item class="pt-10">
+        <ion-input label="categoria" label-placement="floating" fill="outline" placeholder="Digite a categoria do produto"
+          [(ngModel)]="produto.categoria" name="categoria"></ion-input>
+      </ion-item>
+
+      <ion-item class="pt-10">
+        <ion-input label="valor" label-placement="floating" fill="outline" placeholder="Digite o valor"
+          [(ngModel)]="produto.valor"></ion-input>
+      </ion-item>
+
+      <ion-item class="pt-10">
+        <ion-input label="marca" label-placement="floating" fill="outline" placeholder="Digite a marca"
+          [(ngModel)]="produto.marca" name="marca"></ion-input>
+      </ion-item>
+
+      <ion-item class="pt-10">
+        <ion-button [disabled]="false" slot="end" (click)="save()">Salvar</ion-button>
+        <ion-button color="danger" slot="end">Cancelar</ion-button>
+      </ion-item>
+
+    </ion-list>
+  </form>
 </ion-content>

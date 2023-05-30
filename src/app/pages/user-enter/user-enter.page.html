@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>userEnter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #fc="ngForm">
+    <ion-list>
+      <ion-item class="pt-10">
+        <ion-input type="password" label="senha" label-placement="floating" fill="outline" placeholder="Digite seu senha"
+          [(ngModel)]="confpass" name="confpass" #confpass="ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item class="pt-10">
+        <ion-input type="email" label="E-mail" label-placement="floating" fill="outline" placeholder="Digite seu email"
+          [(ngModel)]="user.email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
